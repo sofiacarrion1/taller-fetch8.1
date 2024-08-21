@@ -40,11 +40,3 @@ fetch(DATA_URL)
     console.error('There has been a problem with your fetch operation:', error);
   });
 
-document.addEventListener("DOMContentLoaded", function(){
-  getJSONData(DATA_URL).then(function(response){
-      if(response.status === 'ok'){
-          console.log(response.data.Company.Employees);
-          showEmployees(response.data.Company.Employees)
-      }
-  })
-});
